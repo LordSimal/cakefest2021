@@ -1,0 +1,22 @@
+{
+    "name": "sunlimeGulp",
+    "version": "4.0.0",
+    "description": "local gulp 4 setup",
+    "main": "gulpfile.js",
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@bitbucket.org/sunlimeitservices/wordpress.git"
+    },
+    "author": "Sunlime Web Innovations GmbH",
+    "license": "UNLICENSED",
+    "private": true,
+    "devDependencies": {
+        "dotenv": "^10.0.0",
+        "ini": "^2.0.0"
+    },
+    "scripts": {
+        "start": "[ -d setup/mysql_data ] || node setup/setup.js db; node setup/setup.js start",
+        "db": "node setup/setup.js db",
+        "reset": "node setup/setup.js reset"
+    }
+}
